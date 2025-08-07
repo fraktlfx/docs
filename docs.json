@@ -1,11 +1,17 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "FRAKTL Docs",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#151E30",
+    "light": "#DBB071",
+    "dark": "#151E30"
+  },
+  "background": {
+    "color": {
+      "light": "#F6F4EF",
+      "dark": "#1A1818"
+    }
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -48,6 +54,66 @@
         ]
       },
       {
+        "tab": "Prism - Slack",
+        "global": {
+          "anchors": [
+            {
+              "anchor": "Repository",
+              "href": "https://github.com/fraktlfx/prism-slack",
+              "icon": "github"
+            },
+            {
+              "anchor": "Prism Pipeline",
+              "href": "https://www.prism-pipeline.com",
+              "icon": "/prism/icons/prism.svg"
+            }
+          ]
+        },
+        "groups": [
+          {
+            "group": "Introduction",
+            "pages": [
+              "prism/slack/introduction/Home",
+              "prism/slack/introduction/Installation",
+              "prism/slack/introduction/FAQ"
+            ]
+          },
+          {
+            "group": "Integration",
+            "pages": [
+              "prism/slack/integration/User-Settings",
+              "prism/slack/integration/Project-Settings",
+              "prism/slack/integration/Studio-Settings",
+              "prism/slack/integration/State-Manager",
+              "prism/slack/integration/Media-Browser",
+              "prism/slack/integration/Slack"
+            ]
+          },
+          {
+            "group": "Development",
+            "pages": [
+              "prism/slack/development/API",
+              "prism/slack/development/Console",
+              "prism/slack/development/Planned-Features",
+              "prism/slack/development/Software-Compatability"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Prism - Discord",
+        "groups": [
+          {
+            "group": "Introduction",
+            "pages": [
+              "prism/discord/Home",
+              "prism/discord/Installation",
+              "prism/discord/FAQ"
+            ]
+          }
+        ]
+      },
+      {
         "tab": "API reference",
         "groups": [
           {
@@ -67,26 +133,7 @@
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
@@ -96,13 +143,13 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:info@fraktlfx.com"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Website",
+      "href": "https://fraktlfx.com"
     }
   },
   "contextual": {
@@ -119,9 +166,11 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "website": "https://fraktlfx.com",
+      "github": "https://github.com/fraktlfx",
+      "linkedin": "https://www.linkedin.com/company/fraktlfx/",
+      "youtube": "https://www.youtube.com/@FRAKTLFX",
+      "instagram": "https://www.instagram.com/fraktlfx/"
     }
   }
 }

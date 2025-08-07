@@ -1,0 +1,147 @@
+---
+title: "Installation"
+description: "Steps to install the Slack plugin for Prism"
+---
+
+## Prism
+
+### Plugin
+#### CLI
+For a shorter method of installing the plugin, follow the steps below
+<Steps>
+    <Step title="Terminal/Powershell">
+        Open a Terminal/Powershell in your Prism plugin directory
+    </Step>
+    <Step title="Clone Repository">
+        ```git clone https://github.com/fraktlfx/prism-slack.git Slack```
+    </Step>
+    <Step title="Install Requirements">
+        ```pip install -r requirements.txt -t ./PythonLibs```
+    </Step>
+</Steps>
+
+#### Manual
+For a more manual method of installation, follow the steps below
+<Steps>
+    <Step title="Download">
+        Download the plugin release package from the repository
+    </Step>
+    <Step title="Unzip">
+        Unzip the folder (if needed)
+    </Step>
+    <Step title="Rename (Optional)">
+        The top level folder must be called: Slack. Rename the folder if it's needed.
+    </Step>
+    <Step title="Move">
+        Move the plugin to the Prism plugins directory
+    </Step>
+    <Step title="Reload Prism">
+        Restart/Reload Prism and the plugin should automatically appear in the plugin list enabled
+    </Step>
+</Steps>
+
+
+
+### Slack API's 
+<Warning>This step is only necessary if you didn't use the CLI method of installation</Warning>
+We did not include the Slack API’s in the repository to limit the size of it. You can either download the release package or you can download it on your own.  
+  
+If you chose to download it on your own, please follow the steps below to do so.
+
+<Steps>
+    <Step title="Install Slack SDK">
+        ```pip install slack_sdk```
+    </Step>
+    <Step title="Install Slack Bolt">
+        ```pip install slack_bolt```
+    </Step>
+    <Step title="Locate Slack package install locations">
+        ```pip show slack_sdk```
+        ```pip show slack_bolt```
+    </Step>
+    <Step title="Copy/Move the packages">
+        Copy/Move the now installed slack packages to the following folder: 
+        ```{PRISM_PLUGIN_DIRECTORY}/Slack/PythonLibs```
+        <img
+            src="/images/prism/slack/pythonLibs_location.webp"
+            className="rounded-lg"
+        />
+    </Step>
+</Steps>
+
+
+
+## Slack
+
+### Slack Prism App
+<Steps>
+    <Step title="Use the Provided Manifest">
+        Locate the ```manifest.yml``` file in the Resources folder of the repository/plugin directory. This file simplifies the bot creation process.
+    </Step>
+    <Step title="Create your Slack app">
+        Go to the [Your Apps](https://api.slack.com/apps/) page on the Slack API website. Follow the instructions for creating apps using manifests provided on this page:  
+        [Creating Apps using manifests](https://api.slack.com/reference/manifests#creating_apps)
+        <img
+            className="rounded-lg" 
+            src="/images/prism/slack/create_slack_app.webp" 
+        />
+    </Step>
+    <Step title="Customize the App Icon">
+        Once your app is create, navigate to the **Basic Information** page in the Slack API dashboard.  
+        Under the **Display Information** section, upload an App Icon to personalize your app.
+        <img
+            className="rounded-lg" 
+            src="/images/prism/slack/customize_display_information.webp" 
+        />
+    </Step>
+    <Step title="Install the App">
+        In the left-hand menu, select the **Install App** section.  
+        Install the app into your Slack workspace
+        <img
+            className="rounded-lg" 
+            src="/images/prism/slack/install_slack_app.webp" 
+        />
+    </Step>
+    <Step title="Obtain the Bot User OAuth Token">
+        Go to the **OAuth & Permissions** page in the left-hand menu.  
+        Copy the **Bot User OAuth Token** displayed on this page. It should start like this: ```xoxb-```
+        <img
+            className="rounded-lg" 
+            src="/images/prism/slack/obtain_slack_bot_token.webp" 
+        />
+    </Step>
+    <Step title="Enter the token in Prism Settings">
+        Open the Slack Project/Studio settings page in Prism. Paste the copied Bot User OAuth token in the appropriate field.
+        <img
+            className="rounded-lg" 
+            src="/images/prism/slack/input_bot_token_prism.webp" 
+        />
+    </Step>
+    <Step title="Obtain the Bot App-Level Token">
+        <Warning>Optional if you want to enable Bolt server functionality</Warning>
+        Select the Write token to open a window that contains a token that starts with: ```xapp-```
+        If you do not see a token, then generate the Write Token
+        <img
+            className="rounded-lg" 
+            src="/images/prism/slack/obtain_slack_app_level_token.webp" 
+        />
+    </Step>
+    <Step title="Enter App-Level Token">
+        <Warning>Optional if you want to enable Bolt server functionality</Warning>
+        Open the Slack Project/Studio Settings page in Prism. Paste the copied App-Level Token into the appropriate field to complete the integration.
+        <img
+            className="rounded-lg" 
+            src="/images/prism/slack/input_app_level_token_prism.webp" 
+        />
+    </Step>
+</Steps>
+
+
+## Recommendations
+
+**Mixing Workstations/Render Nodes with no Prism+ License**  
+  
+If you have render nodes or Workstations that don't have a license for Prism+, but a number of your other machines do, then I would highly recommend you set this environment variable:  
+> PRISM_STUDIO_PATH
+  
+The Slack plugin will make use of this environment variable if Studio is not enabled. For us this points directly to the studio config path. The Slack config is stored in the same location as the studio config to make things easy for you.

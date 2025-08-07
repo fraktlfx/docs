@@ -1,0 +1,55 @@
+---
+title: "FAQ"
+---
+
+<Accordion title="Where is the Bot OAuth & App-Level Token Stored?">
+    Prism+/Pro with Studio enabled
+    > PRISM_STUDIO_PATH/configs/slack.json  
+      
+    Open Source
+    > PRISM_PROJECT_PATH/00_Pipeline/pipeline.json
+</Accordion>
+
+<Accordion title="Notify User Pools/Methods">
+    <Tabs>
+        <Tab title="User Pools">
+            **Studio**
+            > This pool of artists will be drawn from the Prism Studio plugin. By default it accepts all default user roles in the pool with the exception of users with the role: Deactivated  
+              
+            **Channel**
+            > This pool will be drawn from the list of users currently in the Slack project channel  
+              
+            **Team**
+            > This was taken out in favor of larger plans. I plan to include some options for Usersgroups with the Teams option, but it will take time.  
+        </Tab>
+        <Tab title="Methods">
+            **Direct**
+            > Notify the selected user by Direct Message  
+            
+            **Ephermal Direct**
+            > Notify the selected user in an ephemeral Direct Message  
+            
+            **Channel**
+            > Notify the selected user in the Slack channel  
+            
+            **Empemeral Channel**
+            > Notify the selected user ephemerally in the Slack channel
+        </Tab>
+    </Tabs>
+</Accordion>
+
+<Accordion title="Where is the Custom Channel Name Stored?">
+    The name of the custom channel is stored in the project pipeline folder. 
+</Accordion>
+
+<Accordion title="Can I mix licensed and non-licensed versions of Prism+?">
+    Yes. There is currently no difference between the versions for the Slack plugin. Though you should see this [Installation - Recommendations](/prism/slack/introduction/installation#recommendations) before moving forward with this setup.
+</Accordion>
+
+<Accordion title="How are you determining the conversion process?">
+    To make things simple, any time you have more than one frame, it will be turned into an MP4 to be uploaded to slack. You can see a relatively complete breakdown here: [State Manager - Conversion](/prism/slack/integration/state-manager#conversion)
+</Accordion>
+
+<Accordion title="Does this work with the Deadline plugin?">
+    Yes! Feel free to give it a whirl!
+</Accordion>

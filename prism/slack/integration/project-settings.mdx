@@ -1,0 +1,42 @@
+---
+title: "Project Settings"
+description: "Settings for the Slack plugin under the Project tab"
+---
+
+<Note>A single option only appies if you are running Prism+ with Studio enabled</Note>  
+There is only one option for Slack in the Project Settings window.
+  
+  
+If you are not running Studio or are not subscribed to Prism+, then all of the Studio options will show up in this window along with the Custom Channel Name field.
+
+<img
+    src="/images/prism/slack/prism_project_custom_channel_name.webp"
+    className="rounded-lg"
+/>
+  
+
+You can give a custom channel name to the project so that you can send notifications/publishes to that custom channel instead of one where the channel name is the same as the project name. 
+To make sure that you don’t need to align project names with the slack channel names, I’ve enabled the option to allow you to enter a Custom Channel Name. Just follow these steps.
+
+<Steps>
+    <Step title="Locate Custom Channel Setting">
+        <img 
+            src="/images/prism/slack/custom_channel_name_empty.webp"
+            className="rounded-lg"
+        />
+    </Step>
+    <Step title="Input Custom Channel Name">
+        Input the channel name you want to send your content.
+        <img
+            src="/images/prism/slack/custom_channel_name_filled_unverified.webp"
+            className="rounded-lg"
+        />
+    </Step>
+    <Step title="Verify the Custom Channel">
+        Press the Verify button. If it passed the check, it will store that information in the project pipeline file and change the button to Verified.
+        <img
+            src="/images/prism/slack/custom_channel_name_filled_verified.webp"
+            className="rounded-lg"
+        />
+    </Step>
+</Steps>
