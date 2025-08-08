@@ -7,6 +7,9 @@
     "light": "#DBB071",
     "dark": "#151E30"
   },
+  "icons": {
+    "library": "lucide"
+  },
   "background": {
     "color": {
       "light": "#F6F4EF",
@@ -22,33 +25,7 @@
           {
             "group": "Getting started",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "index"
             ]
           }
         ]
@@ -66,6 +43,11 @@
               "anchor": "Prism Pipeline",
               "href": "https://www.prism-pipeline.com",
               "icon": "/prism/icons/prism_p_logo_gray.svg"
+            },
+            {
+              "anchor": "Slack Dev",
+              "href": "https://api.slack.com/apps/",
+              "icon": "slack"
             }
           ]
         },
@@ -125,8 +107,8 @@
           {
             "group": "Introduction",
             "pages": [
-              "prism/discord/Home",
-              "prism/discord/Installation",
+              "prism/discord/home",
+              "prism/discord/installation",
               "prism/discord/faq"
             ]
           }
