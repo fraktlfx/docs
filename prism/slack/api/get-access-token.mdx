@@ -1,0 +1,18 @@
+---
+title: "Get Access Token"
+description: "Retrieve the access token from the Slack JSON file"
+---
+
+### Example
+```python Slack\Scripts\client\prism\api.py lines icon="python"
+slack = pcore.getPlugin('Slack')
+
+access_token = slack.get_access_token()
+
+print(access_token)
+```
+  
+### Response
+<ResponseField name="access_token" type="String">
+    Access token used for all commands going forward
+</ResponseField>

@@ -1,0 +1,47 @@
+---
+title: "Overview"
+description: "Overview of the current state of the Slack API commands"
+---
+
+<Warning>Please understand that this could change significantly to allow for more flexibility in development and maintenance</Warning>
+  
+
+## Plugin API
+All the commands in this categery are commands I've made accessible to the dev/user, what arguments they take, and what they accomplish. This is by no means all of them, 
+it’s just what I felt was the more important commands without the need for diving deep into it. In this you should find several things: 
+1. Name of the command
+2. Required arguments for calling the function (if any)
+3. Description of the command 
+4. An example of the function in action
+5. What type of response it gives back (if any)
+6. The location where you can find it in the plugin
+  
+  
+
+## Extending the Bolt Server Functions
+These are examples of things you can include in the Bolt Server file to have more interaction with Slack. I’m not going to post whole functions here, unless necessary, 
+but give you an idea of where to put and what you will need. 
+  
+
+### Create Project on Slack Channel Creation
+In order to do this, you'll need to go to this file:
+> [SLACK_PLUGIN_DIRECTORY]/Scripts/server/events.py
+  
+For this particular setting, we are creating a Project when a Slack channel gets created. However, we are filtering out the first two characters to ensure that it doesn’t 
+just create projects willy-nilly. We are taking the name of the channel and using it to create a Project at the designated location along with the Prism Preset. If you have a preset, 
+you can input it as a string in that location.
+
+```python /Scripts/server/events.py lines icon="python"
+@self.app.event("channel_created")
+def event_channel_created(ack, event, say):
+    ack()
+
+    channel_name = event["channel"]["name"].upper()
+    ...
+    (Request Block)
+    ...
+
+    if '25' in channel_name[:2]:
+        path = f"{PATH_TO_PROJECTS}/{channel_name}"
+        self.core.projects.createProject(channel_name, path, preset="WF")
+```

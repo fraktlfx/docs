@@ -1,0 +1,35 @@
+---
+title: "Media Browser"
+description: "All settings related to publishing content from the Media Browser"
+---
+
+The Slack plugin currently allows you to send content directly from the Media Browser to the appropriate slack channel. Below will outline how you would do that 
+and some caveats to take note of at the bottom.
+
+## Media Browser
+In order to access the menu to publish via the Media Browser, you will need to open the context menu by Right-clicking over the thumbnail of the video or 
+content you are trying to publish to Slack. At the bottom you will find the ‘Publish to Slack’ option. 
+<img
+    src="/images/prism/slack/media_browser_publish_option.webp"
+    className="rounded-lg"
+    />
+
+When you have selected the option to publish, you will be presented with a couple windows. The primary one will be the ‘Slack Publish Information’ 
+window that which will allow you to leave additional comments.
+<img
+    src="/images/prism/slack/media_browser_publish_comments.webp"
+    className="rounded-lg"
+    />
+
+You will now wait for the file to be uploaded to Slack. The smaller the file, the faster it is and vice versa.  
+  
+While it is being uploaded you will be presented with a temporary window letting you know that it’s uploading to Slack. Once it has completed, it will publish 
+the content to the appropriate channel and leave you with this popup
+<img
+    src="/images/prism/slack/media_browser_successful_publish.webp"
+    className="rounded-lg"
+    />
+
+## Current Limitations
+1. Does not convert an image sequence to a video like it does if you are publishing from the State Manager.
+    - If you select an image sequence, it will only upload the first image. You don’t want to have a ton of posts flooding your channel. In the future, I might address this by doing an auto convert but we shall see if it’s necessary.

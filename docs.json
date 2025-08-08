@@ -1,5 +1,5 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
+  "schema": "/schema/docs.json",
   "theme": "mint",
   "name": "FRAKTL Docs",
   "colors": {
@@ -65,7 +65,7 @@
             {
               "anchor": "Prism Pipeline",
               "href": "https://www.prism-pipeline.com",
-              "icon": "/prism/icons/prism.svg"
+              "icon": "/prism/icons/prism_p_logo_gray.svg"
             }
           ]
         },
@@ -92,10 +92,29 @@
           {
             "group": "Development",
             "pages": [
-              "prism/slack/development/api",
               "prism/slack/development/console",
               "prism/slack/development/planned-features",
               "prism/slack/development/software-compatibility"
+            ]
+          },
+          {
+            "group": "API",
+            "pages": [
+              "prism/slack/api/overview",
+              "prism/slack/api/get-access-token",
+              "prism/slack/api/get-app-level-token",
+              "prism/slack/api/get-channel-id",
+              "prism/slack/api/get-channel-users",
+              "prism/slack/api/get-current-project",
+              "prism/slack/api/get-notify-custom-channel",
+              "prism/slack/api/get-notify-user-method",
+              "prism/slack/api/get-notify-user-pool",
+              "prism/slack/api/get-prism-slack-username",
+              "prism/slack/api/get-server-machine",
+              "prism/slack/api/is-studio-loaded",
+              "prism/slack/api/reset-bolt-server-status",
+              "prism/slack/api/start-bolt-server",
+              "prism/slack/api/stop-bolt-server"
             ]
           }
         ]

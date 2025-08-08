@@ -1,0 +1,55 @@
+---
+title: "State Manager"
+description: "All settings options in the Prism State Manager"
+---
+
+## Overview
+Below outlines the general publishing options that are currently available in the Slack plugin.
+
+In your ImageRender and Playblast states, you should now see the option to select the Slack checkbox to enable publishing to Slack or notifying an artist
+of an incoming render.
+
+<img
+    src="/images/prism/slack/state_manager_overview.webp"
+    className="rounded-lg"
+    />
+  
+## Publishing to Slack 
+Selecting this option will allow youto upload your content directly to the Slack channel associated with the project.
+<img
+    src="/images/prism/slack/state_manager_slack_options.webp"
+    className="rounded-lg"
+    />
+
+This will send the content directly to Slack. You are free to leave comments here that will get uploaded to Slack.  
+  
+You can also notify a user when content is on the way to be published. You can view what that will look like here: [Slack - Notifications](/prism/slack/integration/slack#notifications) 
+  
+When you choose to render an image sequence is when things start to get a bit interesting. Refer to the Conversion section below for more information.
+  
+
+### Conversion
+
+You are more than welcome to render out an Image Sequence directly from the State Manager and Publish to Slack, however there are a few things you need to know. When you render an image sequence, 
+it will be automatically converted to an MP4 so that Slack doesn’t upload just the first frame, or potentially 10s of frames all at the same time. Follow the general chart below to figure out 
+whether or not it will be converted.
+  
+<Warning>You will still have access to your image sequence, it's just uploading the converted sequence. It's located here: _RENDERED IMAGE SEQ/slack folder location_</Warning>
+  
+<img
+    src="/images/prism/slack/state_manager_sequence_conversion.webp"
+    className="rounded-lg"
+    />
+  
+This process happens after the rendering is completed so it happens in the “postRender” callback.  
+
+
+### Notify Artist 
+This option will allow you to choose an artist to send a notification to, whether that be by channel, directly, or ephemerally.
+<img 
+    src="/images/prism/slack/state_manager_notify_user.webp"
+    className="rounded-lg"
+    />
+
+The notification gets sent as part of the ```preRender``` and ```prePlayblast``` callback. So it gets executed before everything else. If you want to know what these notifcations look like, go here:
+[Slack - Notifications](/prism/slack/integration/slack#notifications) 

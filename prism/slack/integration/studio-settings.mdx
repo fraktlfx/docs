@@ -1,0 +1,84 @@
+---
+title: "Studio Settings"
+description: "Settings for the Slack plugin under the Studio tab and Tray"
+---
+
+<img
+    src="/images/prism/slack/studio_settings_overview.webp"
+    className="rounded-lg"
+    />
+
+
+## OAuth Bot Token
+Token input is placed in the Studio tab if Studio enabled. If its not, then its placed in the Project tab. 
+You will only be able to input the token, you won’t be able to access it from here. So no one could theoretically rip it out. 
+The token is stored in a json file at the Studio Path location. Otherwise it’s stored in the Project Pipeline json.
+  
+
+
+## Notifications 
+### User Pools
+<Columns cols={3}>
+    <Card title="Channel" icon="list-tree">
+    Draw from the users in the Slack Project Channel  
+      
+    Status: **Active**
+    </Card>
+    <Card title="Studio" icon="building">
+    Draw from the users in the Studio plugin pool  
+      
+    Status: **Inactive** - No way of gathering information from users in the studio pool. Will probably write information to the 
+    studio config in the future.
+    </Card>
+    <Card title="Team" icon="users">
+    Draw from the users in the Slack Team pool
+      
+    Status: **Inactive** - Current implementation poses an overall security concern. Will come back with future planned implementations
+    with user groups.
+    </Card>
+</Columns>
+  
+  
+### Method
+<Columns cols={4}>
+    <Card title="Direct" icon="square">
+    Notify the selected user by Direct message  
+    </Card>
+    <Card title="Ephemeral Direct" icon="square-dashed">
+    Notify the selected user in an ephemeral Direct message  
+    </Card>
+    <Card title="Channel" icon="circle">
+    Notify selected user in the Slack channel
+    </Card>
+    <Card title="Ephemeral Channel" icon="circle-dashed">
+    Notify selected user in an ephemeral Channel message
+    </Card>
+</Columns>
+  
+
+## Server
+### Settings
+In the Server section, enter your App-Level Token from the app’s information page on the Slack Developer site.
+This uses the same method as the Bot OAuth Token above and can only be entered via the button below the text field.  
+  
+You may start the server from this section, but note:
+- If the server is already running, it will not restart.
+
+- If the server is not running locally or remotely, the Start Server button will be active, but starting it may fail.
+  
+  
+### Prism Tray
+With this plugin, you are able to check the status of the server in the Prism Tray. Just open the context menu of the tray,
+navigate to the Slack menu and in it you will be provided with the following:
+<img
+    src="/images/prism/slack/server_settings_tray.webp"
+    className="round-lg"
+    />  
+
+From here you can see if the Slack Bolt Server isrunning by indicating it with a visual cue, and the current status. These are the current status':  
+- ✅ Running
+- 🚫 Not Running  
+  
+You can choose to either Start or Stop the server as well. These commands will trigger a local server session to popup in the terminal.  
+  
+<Note>The server will not start if it is running. However if you know it's not running and can't start it, you can navigate to the Prism Settings window and choose: Reset Server. You can also do this via command line by using this: [reset_bolt_server_status]()</Note>

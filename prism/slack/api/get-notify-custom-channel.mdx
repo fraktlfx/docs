@@ -1,0 +1,19 @@
+---
+title: "Get Notify Custom Channel"
+description: "Grabs the custom channel for the active project if there is one. It will appear blank if there is none"
+---
+
+### Example
+```python Slack\Scripts\client\prism\api.py lines icon="python"
+slack = pcore.getPlugin('Slack')
+
+channel = slack.get_custom_channel()
+
+print(channel)
+```
+  
+### Response
+<ResponseField name="custom_channel" type="String">
+    Returns the currently active projects custom channel name on Slack
+</ResponseField>
+  

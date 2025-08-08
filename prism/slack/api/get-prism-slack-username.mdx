@@ -1,0 +1,19 @@
+---
+title: "Get Prism Slack Username"
+description: "Get the current Prism instance users Slack display name"
+---
+
+### Example
+```python Slack\Scripts\client\prism\api.py lines icon="python"
+slack = pcore.getPlugin('Slack')
+
+username = slack.get_prism_slack_username()
+
+print(username)
+```
+  
+### Response
+<ResponseField name="display_name" type="String">
+    Returns the currently active users Slack display name
+</ResponseField>
+  

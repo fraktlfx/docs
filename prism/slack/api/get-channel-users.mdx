@@ -1,0 +1,30 @@
+---
+title: "Get Channel Users"
+description: "Populates user pool with a list of the current active members in a channel"
+---
+
+### Arguments
+<ParamField path="access_token" type="string" required>
+    The Bot OAuth Token acquired from the Slack app
+</ParamField>
+<ParamField path="project" type="string" required>
+    Project/Channel name
+</ParamField>
+
+### Example
+```python Slack\Scripts\client\prism\api.py lines icon="python"
+slack = pcore.getPlugin('Slack')
+access_token = slack.get_access_token()
+proj = slack.get_current_project()
+channel_id = slack.get_channel_id(access_token, proj)
+
+channel_users = slack.get_channel_users()
+
+print(channel_users)
+```
+  
+### Response
+<ResponseField name="channel_users" type="List">
+    List of users in the channel
+</ResponseField>
+  

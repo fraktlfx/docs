@@ -1,0 +1,46 @@
+---
+title: "Planned Features"
+description: "All currently planned features for the Slack plugin"
+---
+
+<Tabs>
+    <Tab title="Planned" icon="list-ol">
+        <Card title="Add Prism Comments Based on Slack Threads">
+            Include the option to include comments in threads on Slack as comments on Prism versions in the media tab. 
+        </Card>
+        <Card title="Approval Buttons with a Versioned Publish">
+            Include some Actionable buttons below a publish to choose the current status once it's reviewed. This requires a proper bolt server implementation so it will take time.
+        </Card>
+        <Card title="Reintroduce Teams User Pool">
+            There is already some code in the plugin that would enable you to load the entire team into the user pool. However it's kinda not a safe option. When I start working in Multi-Channel stuff for notifications, that is when I will reintroduce the Teams option for user pools. 
+        </Card>
+        <Card title="Include Options for User Groups in Slack Teams">
+            This is going to be part of a larger goal. Essentially you could create user groups based on department names, or something similar, and assign certain tasks to be part of certain user pools. This would be incorporated with the Multi-Channel settings mentioned below. 
+        </Card>
+        <Card title="Multi-Channel Settings">
+            There has been some discussion around channels that are more suited for different departments. This can also reduce the flood of notifications from larger projects. For example, if you publish things for reviews it can be sent directly to a channel dedicated to those instead of flooding the primary channel.
+        </Card>
+    </Tab>
+    <Tab title="Completed" icon="circle">
+        <Card title="Integrate Deadline">
+            Currently publishing to the farm is unsupported. It will need a separate Python task as part of the job in order to carry out the publishing via render farm.
+        </Card>
+        <Card title="Custom Slack Channel Names for Notifications/Publishes">
+            Give you the option to add custom slack channel names. Default option will still be the name of the project.
+        </Card>
+        <Card title="User Display Names instead of Real Names">
+            I'll be adding a feature that will let the user choose their name according to their name on Slack in the Prism User Settings. This is not just to help with the user tagging but also to be more inclusive.
+        </Card>
+        <Card title="Allow for Direct Message User Notifications">
+            Direct messages to individual artists can be chosen as an option in order to avoid flooding the channel unnecessarily. 
+        </Card>
+        <Card title="Allow for Ephemeral Direct Message User Notifications">
+            Lots of messages could potentially flood the channel unnecessarily to alert another artist of an incoming update. Ephemeral messages can help to reduce the impact. 
+        </Card>
+        <Card title="Prism Slack Bot Added to Channels Automatically">
+            Add the slack bot to public channels every time one is created
+        </Card>
+    </Tab>
+    <Tab title="Ommitted" icon="xmark">
+    </Tab>
+</Tabs>

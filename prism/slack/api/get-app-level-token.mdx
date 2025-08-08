@@ -1,0 +1,19 @@
+---
+title: "Get App-Level Token"
+description: "Retrieve the App-Level token from the Slack JSON file"
+---
+
+### Example
+```python Slack\Scripts\client\prism\api.py lines icon="python"
+slack = pcore.getPlugin("Slack")
+
+app_token = slack.get_app_level_token()
+
+print(app_token)
+```
+  
+### Response
+<ResponseField name="app_token" type="String">
+    App-Level token used for bolt server comamnds
+</ResponseField>
+  

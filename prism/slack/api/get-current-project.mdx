@@ -1,0 +1,18 @@
+---
+title: "Get Current Project"
+description: "Retrieves the current active project"
+---
+
+### Example
+```python Slack\Scripts\client\prism\api.py lines icon="python"
+slack = pcore.getPlugin('Slack')
+
+proj = slack.get_current_project()
+
+print(proj)
+```
+  
+### Response
+<ResponseField name="project" type="String">
+    Returns users currently active project
+</ResponseField>

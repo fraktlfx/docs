@@ -1,0 +1,19 @@
+---
+title: "Get Notify User Method"
+description: "Gets the method for sending notifications to users"
+---
+
+### Example
+```python Slack\Scripts\client\prism\api.py lines icon="python"
+slack = pcore.getPlugin('Slack')
+
+method = slack.get_notify_user_method()
+
+print(method)
+```
+  
+### Response
+<ResponseField name="user_method" type="String">
+    Returns the currently active project, or studio setting, user method for notifying individuals
+</ResponseField>
+  

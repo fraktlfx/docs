@@ -1,0 +1,19 @@
+---
+title: "Get Server Machine"
+description: "Grabs the name of the server machine that is currently running the Bolt server. If there is none, this it will appear blank."
+---
+
+### Example
+```python Slack\Scripts\client\prism\api.py lines icon="python"
+slack = pcore.getPlugin('Slack')
+
+server = slack.get_server_machine()
+
+print(server)
+```
+  
+### Response
+<ResponseField name="server_machine" type="String">
+    Returns the machine hostname currently running the Bolt server
+</ResponseField>
+  

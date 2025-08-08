@@ -1,0 +1,19 @@
+---
+title: "Get Notify User Pool"
+description: "Gets the user pool for sending notifications to users"
+---
+
+### Example
+```python Slack\Scripts\client\prism\api.py lines icon="python"
+slack = pcore.getPlugin('Slack')
+
+method = slack.get_notify_user_pool()
+
+print(method)
+```
+  
+### Response
+<ResponseField name="user_pool" type="String">
+    Returns the currently active project, or studio setting, user pool for notifying individuals
+</ResponseField>
+  

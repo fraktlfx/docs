@@ -1,0 +1,29 @@
+---
+title: "Get Channel ID"
+description: "Grabs the ID of the channel based on the project/channel name"
+---
+
+### Arguments
+<ParamField path="access_token" type="string" required>
+    The Bot OAuth Token acquired from the Slack app
+</ParamField>
+<ParamField path="project" type="string" required>
+    Project/Channel name
+</ParamField>
+
+### Example
+```python Slack\Scripts\client\prism\api.py lines icon="python"
+slack = pcore.getPlugin('Slack')
+access_token = slack.get_access_token()
+proj = slack.get_current_project()
+
+channel_id = slack.get_channel_id(access_token, proj)
+
+print(channel_id)
+```
+  
+### Response
+<ResponseField name="channel_id" type="String">
+    Returns the channel id of the input project/channel name
+</ResponseField>
+  

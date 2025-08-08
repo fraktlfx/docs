@@ -1,0 +1,19 @@
+---
+title: "Is Studio Loaded"
+description: "Just checks whether or not the Studio plugin is enabled in your Prism instance."
+---
+
+### Example
+```python Slack\Scripts\client\prism\api.py lines icon="python"
+slack = pcore.getPlugin('Slack')
+
+server = slack.get_server_machine()
+
+print(server)
+```
+  
+### Response
+<ResponseField name="loaded" type="Object">
+    Returns whether or not Studio plugin is loaded.
+</ResponseField>
+  

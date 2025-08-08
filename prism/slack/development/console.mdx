@@ -1,0 +1,56 @@
+---
+title: "Console"
+description: ""
+---
+
+## Intro 
+You can do a decent amount with the console, and I’ve tried to make it as relatively accessible to the things you will need as a user. For the most part you aren’t 
+going to do much but start/stop/reset the bolt server. However you can find out a good bit of information using the api commands I’ve coded into the plugin such as: 
+1. Getting the Slack Channel ID 
+2. Grabbing the token used to publish files 
+3. Getting the notify user pool 
+4. Etc... 
+
+For a full list commands, you navigate the API category in the navigation column to the left.
+  
+
+## Accessing the Console 
+In order to access the console, you'll need to access it from the Tools folder in the Prism2 program directory:
+> _C:\Program Files\Prism2\Tools\prism_console.bat_
+  
+That should open this python console
+<img 
+    src="/images/prism/slack/prism_console.webp"
+    className="rounded-lg"
+    />
+  
+## Slack Plugin API Commands 
+In order to interact with the Slack API and do things like start and stop the server, you'll need to acquire the plugin first.  
+```python lines icon="python"
+slack = pcore.getPlugin('Slack')
+```
+
+From here you can make all sorts of commands and layer them with each other As an example, if you wanted to grab a list of all the users in a Slack channel you would do the following:
+```python lines icon="python"
+token = slack.get_access_token()
+project = slack.get_current_project()
+channel_id = slack.get_channel_id(token, project)
+users = slack.get_channel_users(token, channel_id)
+print(users)
+```
+  
+<Tip>If you want a nicer way to see your users, you can use pprint instead of print. Just make sure you import it first:  ```from pprint import pprint```</Tip>
+  
+
+## Bolt Server
+Then you can type in any command you need for it. As an example, in order to start the Bolt Server, you would do this (mine is already running but you get the idea):
+```python lines icon="python"
+slack.start_bolt_server()
+```
+
+If the Bolt server settings need to be reset because the config never cleared, I gave you the option to reset the Bolt server settings:
+```python lines icon="python"
+slack.reset_bolt_server_status()
+```
+
+Once you have reset the config for the bolt server, you can then start it back using the command above.
