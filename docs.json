@@ -17,7 +17,7 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Home",
         "groups": [
           {
             "group": "Getting started",
@@ -73,29 +73,29 @@
           {
             "group": "Introduction",
             "pages": [
-              "prism/slack/introduction/Home",
-              "prism/slack/introduction/Installation",
+              "prism/slack/introduction/home",
+              "prism/slack/introduction/installation",
               "prism/slack/introduction/FAQ"
             ]
           },
           {
             "group": "Integration",
             "pages": [
-              "prism/slack/integration/User-Settings",
-              "prism/slack/integration/Project-Settings",
-              "prism/slack/integration/Studio-Settings",
-              "prism/slack/integration/State-Manager",
-              "prism/slack/integration/Media-Browser",
-              "prism/slack/integration/Slack"
+              "prism/slack/integration/user-settings",
+              "prism/slack/integration/project-settings",
+              "prism/slack/integration/studio-settings",
+              "prism/slack/integration/state-manager",
+              "prism/slack/integration/media-browser",
+              "prism/slack/integration/slack"
             ]
           },
           {
             "group": "Development",
             "pages": [
               "prism/slack/development/API",
-              "prism/slack/development/Console",
-              "prism/slack/development/Planned-Features",
-              "prism/slack/development/Software-Compatability"
+              "prism/slack/development/console",
+              "prism/slack/development/planned-features",
+              "prism/slack/development/software-compatibility"
             ]
           }
         ]
