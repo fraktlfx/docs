@@ -75,7 +75,7 @@
             "pages": [
               "prism/slack/introduction/home",
               "prism/slack/introduction/installation",
-              "prism/slack/introduction/FAQ"
+              "prism/slack/introduction/faq"
             ]
           },
           {
@@ -92,7 +92,7 @@
           {
             "group": "Development",
             "pages": [
-              "prism/slack/development/API",
+              "prism/slack/development/api",
               "prism/slack/development/console",
               "prism/slack/development/planned-features",
               "prism/slack/development/software-compatibility"
@@ -108,7 +108,7 @@
             "pages": [
               "prism/discord/Home",
               "prism/discord/Installation",
-              "prism/discord/FAQ"
+              "prism/discord/faq"
             ]
           }
         ]
