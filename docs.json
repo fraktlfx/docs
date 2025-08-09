@@ -31,7 +31,7 @@
         ]
       },
       {
-        "tab": "Prism - Slack",
+        "tab": "Prism/Slack",
         "global": {
           "anchors": [
             {
@@ -55,9 +55,9 @@
           {
             "group": "Introduction",
             "pages": [
-              "prism/slack/introduction/home",
-              "prism/slack/introduction/installation",
-              "prism/slack/introduction/faq"
+              "prism/slack/home",
+              "prism/slack/installation",
+              "prism/slack/faq"
             ]
           },
           {
@@ -102,14 +102,46 @@
         ]
       },
       {
-        "tab": "Prism - Discord",
+        "tab": "Prism/Discord",
+        "global": {
+          "anchors": [
+            {
+              "anchor": "Prism Pipeline",
+              "href": "https://www.prism-pipeline.com",
+              "icon": "/prism/icons/prism_p_logo_gray.svg"
+            },
+            {
+              "anchor": "Discord Dev",
+              "href": "https://api.slack.com/apps/",
+              "icon": "discord"
+            }
+          ]
+        },
         "groups": [
           {
             "group": "Introduction",
             "pages": [
-              "prism/discord/home",
-              "prism/discord/installation",
-              "prism/discord/faq"
+              "prism/discord/home"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Prism/FrameIO",
+        "global": {
+          "anchors": [
+            {
+              "anchor": "Prism Pipeline",
+              "href": "https://www.prism-pipeline.com",
+              "icon": "/prism/icons/prism_p_logo_gray.svg"
+            }
+          ]
+        },
+        "groups": [
+          {
+            "group": "Introduction",
+            "pages": [
+              "prism/frameio/home"
             ]
           }
         ]
