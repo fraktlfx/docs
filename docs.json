@@ -57,7 +57,8 @@
             "pages": [
               "prism/slack/home",
               "prism/slack/installation",
-              "prism/slack/faq"
+              "prism/slack/faq",
+              "prism/slack/changelog"
             ]
           },
           {
