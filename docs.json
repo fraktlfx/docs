@@ -62,14 +62,22 @@
             ]
           },
           {
-            "group": "Integration",
+            "group": "Prism",
             "pages": [
               "prism/slack/integration/user-settings",
               "prism/slack/integration/project-settings",
               "prism/slack/integration/studio-settings",
               "prism/slack/integration/state-manager",
-              "prism/slack/integration/media-browser",
-              "prism/slack/integration/slack"
+              "prism/slack/integration/media-browser"
+            ]
+          },
+          {
+            "group": "Slack",
+            "pages": [
+              "prism/slack/slack/publish",
+              "prism/slack/slack/notifications",
+              "prism/slack/slack/approvals",
+              "prism/slack/slack/usergroups"
             ]
           },
           {
@@ -86,15 +94,30 @@
               "prism/slack/api/overview",
               "prism/slack/api/get-access-token",
               "prism/slack/api/get-app-level-token",
+              "prism/slack/api/get-approvals-usergroup",
+              "prism/slack/api/get-approvals-usergroup-status",
+              "prism/slack/api/get-channel-history",
               "prism/slack/api/get-channel-id",
               "prism/slack/api/get-channel-users",
               "prism/slack/api/get-current-project",
+              "prism/slack/api/get-file-timestamp",
               "prism/slack/api/get-notify-custom-channel",
               "prism/slack/api/get-notify-user-method",
               "prism/slack/api/get-notify-user-pool",
               "prism/slack/api/get-prism-slack-username",
               "prism/slack/api/get-server-machine",
+              "prism/slack/api/get-server-pid",
+              "prism/slack/api/get-server-status",
+              "prism/slack/api/get-slack-user-id",
+              "prism/slack/api/get-tag-artist",
+              "prism/slack/api/get-user-info",
+              "prism/slack/api/get-usergroup-users",
               "prism/slack/api/is-studio-loaded",
+              "prism/slack/api/post-channel-ephemeral-message",
+              "prism/slack/api/post-channel-message",
+              "prism/slack/api/post-direct-ephemeral-message",
+              "prism/slack/api/post-direct-message",
+              "prism/slack/api/post-threaded-message",
               "prism/slack/api/reset-bolt-server-status",
               "prism/slack/api/start-bolt-server",
               "prism/slack/api/stop-bolt-server"

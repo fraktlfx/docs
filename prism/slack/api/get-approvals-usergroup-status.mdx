@@ -1,0 +1,20 @@
+---
+title: "Get Approvals Usergroup Status"
+description: "Grabs whether or not to use usergroups when working with approvals in Slack"
+---
+
+
+### Example
+```python Slack\Scripts\client\prism\api.py lines icon="python"
+slack = pcore.getPlugin('Slack')
+
+enabled = slack.get_approvals_usergroup_status()
+
+print(enabled)
+```
+  
+### Response
+<ResponseField name="enabled" type="string">
+    Returns a True or False string value (not a boolean)
+</ResponseField>
+  

@@ -1,0 +1,19 @@
+---
+title: "Get Server PID"
+description: "Grabs the bolt servers process id."
+---
+
+### Example
+```python Slack\Scripts\client\prism\api.py lines icon="python"
+slack = pcore.getPlugin('Slack')
+
+pid = slack.get_server_pid()
+
+print(pid)
+```
+  
+### Response
+<ResponseField name="pid" type="Int">
+    Returns the machine process id currently running the Bolt server
+</ResponseField>
+  

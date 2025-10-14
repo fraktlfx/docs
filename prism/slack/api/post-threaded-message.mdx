@@ -1,0 +1,32 @@
+---
+title: "Post Threaded Message"
+description: "Posts a message to a chosen post by another user/bot."
+---
+
+### Arguments
+<ParamField path="access_token" type="string" required>
+    The Bot OAuth Token acquired from the Slack app
+</ParamField>
+<ParamField path="channel_id" type="string" required>
+    ID of the Channel
+</ParamField>
+<ParamField path="message" type="string" required>
+    Your message that you want to send/push to the channel
+</ParamField>
+<ParamField path="thread_ts" type="string" required>
+    The thread timestamp of the post you will be replying to
+</ParamField>
+
+### Example
+```python Slack\Scripts\client\slack\api\post.py lines icon="python"
+slack = pcore.getPlugin('Slack')
+
+slack.get_access_token()
+project = get_current_project()
+channel_id = slack.get_channel_id(access_token, project)
+
+thread_ts = "1234567890.123456"
+message = "Hey Slack User!"
+
+slack.post_threaded_message(access_token, channel_id, message, thread_ts)
+```

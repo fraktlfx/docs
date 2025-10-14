@@ -1,0 +1,20 @@
+---
+title: "Get Approvals Usergroup"
+description: "Grabs the selected Slack Usergroup that will authorize approvals"
+---
+
+
+### Example
+```python Slack\Scripts\client\prism\api.py lines icon="python"
+slack = pcore.getPlugin('Slack')
+
+usergroup = slack.get_approvals_usergroup()
+
+print(usergroup)
+```
+  
+### Response
+<ResponseField name="usergroup" type="string">
+    Returns the usergroup of the input usergroup name
+</ResponseField>
+  

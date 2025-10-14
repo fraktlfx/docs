@@ -1,0 +1,30 @@
+---
+title: "Get Channel History"
+description: "Grabs information on the latest 30 messages in a specific channel"
+---
+
+### Arguments
+<ParamField path="access_token" type="string" required>
+    The Bot OAuth Token acquired from the Slack app
+</ParamField>
+<ParamField path="channel_id" type="string" required>
+    ID of the Channel
+</ParamField>
+
+### Example
+```python Slack\Scripts\client\slack\api\get.py lines icon="python"
+slack = pcore.getPlugin('Slack')
+access_token = slack.get_access_token()
+project = slack.get_current_project()
+channel_id = slack.get_channel_id(access_token, proj)
+
+messages = slack.get_channel_history(access_token, channel_id)
+
+print(messages)
+```
+  
+### Response
+<ResponseField name="messages" type="dictionary">
+    Returns the latest 30 messages as a dictionary value.
+</ResponseField>
+  

@@ -1,0 +1,28 @@
+---
+title: "Get Usergroup Users"
+description: "Grabs all of the users in the usergroup."
+---
+### Arguments
+<ParamField path="access_token" type="string" required>
+    The Bot OAuth Token acquired from the Slack app
+</ParamField>
+<ParamField path="usergroup" type="string" required>
+    Usergroup name
+</ParamField>
+
+### Example
+```python Slack\Scripts\client\slack\api\get.py lines icon="python"
+slack = pcore.getPlugin('Slack')
+access_token = slack.get_access_token()
+usergroup = slack.get_approvals_usergroup()
+
+users = slack.get_usergroup_users()
+
+print(users)
+```
+  
+### Response
+<ResponseField name="users" type="List">
+    Returns a list of users in the usergroup.
+</ResponseField>
+  

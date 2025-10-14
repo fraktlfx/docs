@@ -1,0 +1,19 @@
+---
+title: "Get Server Status"
+description: "Grabs the status of the bolt server running."
+---
+
+### Example
+```python Slack\Scripts\client\prism\api.py lines icon="python"
+slack = pcore.getPlugin('Slack')
+
+status = slack.get_server_status()
+
+print(status)
+```
+  
+### Response
+<ResponseField name="status" type="String">
+    Returns the status of the Bolt server
+</ResponseField>
+  

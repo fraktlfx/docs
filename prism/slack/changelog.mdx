@@ -3,11 +3,44 @@ title: "Changelog"
 description: "Changelog for the Slack plugin"
 ---
 
-<Update label="October 8th, 2025" description="2.0.17">
-    ### Required App Scope Changes
-    The following Bot Token Scopes are going to be required in order to make full use of this update.
-    [+] usergroups:read
+<Update label="2.0.17" description="October 14th, 2025">
+    <Warning>When running the Studio plugin with Prism+ or Prism Pro, an Admin needs to update and relaunch Prism to apply the new Slack settings to the config file. Otherwise it will error
+    on standard artists.</Warning>
 
+    ### Required Prism Bot Scope Changes
+    + usergroups:read
 
-    ### Added Features
+    <Tabs>
+        <Tab title="Added Features">
+            + **Tagging Artist Optional**
+            > You can disable tagging the artist in the settings when making a publish.  
+
+            + **Optional No Text on Publishes**
+            > When Tagging the artist is disabled from the settings and the artist who published to Slack doesn't leave comments, it will eliminate all 
+            text from the publish to minimize space.
+            
+            + **Slack Approval Buttons**  
+            > You will now have access to submit your published content from Prism with an Approvals option in your State Manager, Media Browser.
+            You can find more information on the Approvals in the docs here: [Slack/Approvals](/prism/slack/slack/approvals.mdx)
+
+            + **Usergroups for Slack Approvals**
+            > Usergroups are now possible for Approvals. Input and Verify your usergroup for approvals. 
+            You can find more information here: [Slack/Usergroups](/prism/slack/slack/usergroups.mdx)
+
+            + **Metadata Added to Publishes**
+            > Metadata now gets added to posts that are published to Slack from artists.  
+              
+            + **Artist Notification on Export**
+            > When running an Export state, the artist can notify another artist on the team.
+        </Tab>
+        <Tab title="Fixed Bugs">
+            + **Fixed Access to API commands that interface with Slack**
+            > The Slack api commands in the plugin were missing from the original code that were in the documentation. You will be able to access these
+            commands now when running the example commands.  
+        </Tab>
+        <Tab title="Docs">
+            + **Added missing Slack API commands**
+            > We've added the missing Slack API commands to the documentation and extended them with the relevant Prism API commands.
+        </Tab>
+    </Tabs>
 </Update>

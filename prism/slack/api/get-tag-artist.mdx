@@ -1,0 +1,19 @@
+---
+title: "Get Tag Artist"
+description: "Checks whether or not the settings have artist taggin in publishes or not."
+---
+
+### Example
+```python Slack\Scripts\client\prism\api.py lines icon="python"
+slack = pcore.getPlugin('Slack')
+
+tag = slack.get_tag_artist()
+
+print(tag)
+```
+  
+### Response
+<ResponseField name="tag" type="string">
+    Returns a True or False string value (not a boolean).
+</ResponseField>
+  

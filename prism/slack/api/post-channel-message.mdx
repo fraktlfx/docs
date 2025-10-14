@@ -1,0 +1,30 @@
+---
+title: "Post Channel Message"
+description: "Posts a message to the provided channel."
+---
+
+### Arguments
+<ParamField path="access_token" type="string" required>
+    The Bot OAuth Token acquired from the Slack app
+</ParamField>
+<ParamField path="channel_id" type="string" required>
+    Your chosen channels channel_id
+</ParamField>
+<ParamField path="message" type="string" required>
+    Your message that you want to send/push to the channel
+</ParamField>
+
+
+### Example
+```python Slack\Scripts\client\slack\api\post.py lines icon="python"
+slack = pcore.getPlugin('Slack')
+
+slack.get_access_token()
+project = get_current_project()
+channel_id = slack.get_channel_id(access_token, project)
+
+message = "Hey Slack!"
+
+slack.post_channel_message(access_token, channel_id, message)
+
+```

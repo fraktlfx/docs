@@ -17,6 +17,10 @@ The token is stored in a json file at the Studio Path location. Otherwise it’s
 
 
 ## Notifications 
+### Tag Artist
+Enable the functionality to tag the artist when a publish gets sent to Slack.
+
+
 ### User Pools
 <Columns cols={3}>
     <Card title="Channel" icon="list-tree">
@@ -55,6 +59,24 @@ The token is stored in a json file at the Studio Path location. Otherwise it’s
     </Card>
 </Columns>
   
+
+## Approvals
+### Enable
+If you choose to enable the Approvals options, it will give the artists an additional prompt when making publishes through the State Manager
+or the Media Browser to allow them to mark a publish with a Status. You can see more information on that here: [Slack - Approvals](/prism/slack/slack/approvals.mdx)
+  
+### Usergroups
+<Info>This feature requires a subscription to Slack Pro or higher</Info>
+You can choose to enable Usergroups as an additional filter when someone presses a button associated with Approvals. If someone is not part of a selected Usergroup
+it will prompt them that they cannot access that feature.
+  
+If you do not enable the Usergroups, anyone in the Slack channel can press the buttons and mark them.
+  
+In order to make use of the Usergroup feature, enable it and input your Usergroup into the text field and press the `Verify` button. Prism will make a call to check
+and see if the usergroup exists. If it does it will turn green and say that it has been verified. If not, it will not change.
+  
+<Note>If there are no changes, you can check the Prism Console to see whats going on.  
+``C:\ProgramFiles\Prism2\Tools\prism_gui_with_console.bat``</Note>
 
 ## Server
 ### Settings

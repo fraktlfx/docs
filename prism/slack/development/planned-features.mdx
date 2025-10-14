@@ -5,20 +5,19 @@ description: "All currently planned features for the Slack plugin"
 
 <Tabs>
     <Tab title="Planned" icon="file-plus">
+        <Card title="Add Nuke to list of compatible software">
+            Add Slack publishing options to the Nuke publishing process.  
+            [When we can get a license for this we can update]
+        </Card>
         <Card title="Add Prism Comments Based on Slack Threads">
             Include the option to include comments in threads on Slack as comments on Prism versions in the media tab. 
         </Card>
-        <Card title="Approval Buttons with a Versioned Publish">
-            Include some Actionable buttons below a publish to choose the current status once it's reviewed. This requires a proper bolt server implementation so it will take time.
+        <Card title="Reorganize Settings">
+            Reorganizing the settings tabs will enable us to continue adding features without making the window bigger.
         </Card>
-        <Card title="Reintroduce Teams User Pool">
-            There is already some code in the plugin that would enable you to load the entire team into the user pool. However it's kinda not a safe option. When I start working in Multi-Channel stuff for notifications, that is when I will reintroduce the Teams option for user pools. 
-        </Card>
-        <Card title="Include Options for User Groups in Slack Teams">
-            This is going to be part of a larger goal. Essentially you could create user groups based on department names, or something similar, and assign certain tasks to be part of certain user pools. This would be incorporated with the Multi-Channel settings mentioned below. 
-        </Card>
-        <Card title="Multi-Channel Settings">
-            There has been some discussion around channels that are more suited for different departments. This can also reduce the flood of notifications from larger projects. For example, if you publish things for reviews it can be sent directly to a channel dedicated to those instead of flooding the primary channel.
+        <Card title="Sign-in with Slack">
+            Give the artist the ability to sign into Slack with a button and gather the necessary information intead of putting
+            the artists name in manually.
         </Card>
     </Tab>
     <Tab title="Completed" icon="circle">
@@ -40,10 +39,30 @@ description: "All currently planned features for the Slack plugin"
         <Card title="Prism Slack Bot Added to Channels Automatically">
             Add the slack bot to public channels every time one is created
         </Card>
+        <Card title="Approvals Usergroups">
+            Usergroups have been enabled for Approvals but it can be used for other uses as well.
+        </Card>
+        <Card title="Approval Buttons with a Versioned Publish">
+            Include some Actionable buttons below a publish to choose the current status once it's reviewed. This requires a proper bolt server implementation so it will take time.
+        </Card>
+        <Card title="Enable/Disable Tagging Artist">
+            You can now enable/disable taggin the artist that published the content to Slack. Metadata now gets added to the post that can be used to get the artist instead.
+        </Card>
+        <Card title="Metadata on Publishes">
+            Metadata now gets added to published posts to make it easier to parse through and add additional features.
+        </Card>
+        <Card title="Artist notification on Exports">
+            Send notifications to artists when publishing exports from the state manager.
+        </Card>
     </Tab>
     <Tab title="Ommitted" icon="bookmark-x">
-        <Card title="Reserved">
-            N/A
+        <Card title="Multi-Channel Settings">
+            [We feel like this may not be necessary. Since this was only in discussions rather than for actual need. If there is actual interest, we will look into it] There has been some discussion around channels 
+            that are more suited for different departments. This can also reduce the flood of notifications from larger projects. For example, if you publish things for reviews it can be sent directly to a channel 
+            dedicated to those instead of flooding the primary channel.
         </Card>
+        <Card title="Reintroduce Teams User Pool">
+            There is already some code in the plugin that would enable you to load the entire team into the user pool. However it's kinda not a safe option. When I start working in Multi-Channel stuff for notifications, that is when I will reintroduce the Teams option for user pools. 
+        </Card> 
     </Tab>
 </Tabs>

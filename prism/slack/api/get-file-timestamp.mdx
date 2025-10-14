@@ -1,0 +1,34 @@
+---
+title: "Get File Timestamp"
+description: "Retrieves the timestamp of a file uploaded to a Slack channel"
+---
+
+### Arguments
+<ParamField path="access_token" type="string" required>
+    The Bot OAuth Token acquired from the Slack app
+</ParamField>
+<ParamField path="channel_id" type="string" required>
+    ID of the Channel
+</ParamField>
+<ParamField path="file_id" type="string" required>
+    The file id of the file you are specifically acquiring information from
+</ParamField>
+
+### Example
+```python Slack\Scripts\client\slack\api\get.py lines icon="python"
+slack = pcore.getPlugin('Slack')
+
+access_token = slack.get_access_token()
+project = slack.get_current_project()
+channel_id = slack.get_channel_id(access_token, project)
+file_id = "F0S43PZDF"
+
+ts = slack.get_file_timestamp(access_token, channel_id, file_id)
+
+print(ts)
+```
+  
+### Response
+<ResponseField name="ts" type="String">
+    Returns a string numbered value in the form of: 1234567890.123456
+</ResponseField>

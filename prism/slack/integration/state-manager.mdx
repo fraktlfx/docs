@@ -6,13 +6,17 @@ description: "All settings options in the Prism State Manager"
 ## Overview
 Below outlines the general publishing options that are currently available in the Slack plugin.
 
-In your ImageRender and Playblast states, you should now see the option to select the Slack checkbox to enable publishing to Slack or notifying an artist
+In your ```ImageRender```, ```Playblast```, or ```Export``` states, you should now see the option to select the Slack checkbox to enable publishing to Slack or notifying an artist
 of an incoming render.
 
-<img
-    src="/images/prism/slack/state_manager_overview.webp"
-    className="rounded-lg"
-    />
+<Columns cols={2}>
+    <Card title="Render\Playblast" img="/images/prism/slack/state_manager_overview.webp">
+        ImageRender State
+    </Card>
+    <Card title="Export" img="/images/prism/slack/state_manager_export.webp">
+        Export State
+    </Card>
+</Columns>
   
 ## Publishing to Slack 
 Selecting this option will allow youto upload your content directly to the Slack channel associated with the project.
@@ -23,10 +27,24 @@ Selecting this option will allow youto upload your content directly to the Slack
 
 This will send the content directly to Slack. You are free to leave comments here that will get uploaded to Slack.  
   
-You can also notify a user when content is on the way to be published. You can view what that will look like here: [Slack - Notifications](/prism/slack/integration/slack#notifications) 
+You can also notify a user when content is on the way to be published. You can view what that will look like here: [Slack - Notifications](/prism/slack/slack/notifications.mdx) 
   
 When you choose to render an image sequence is when things start to get a bit interesting. Refer to the Conversion section below for more information.
   
+### Notify Artist 
+This option will allow you to choose an artist to send a notification to, whether that be by channel, directly, or ephemerally. 
+  
+<Note>It is possible for the Slack options to lag a bit to populate because it's trying to gather all of the users in the Slack channel.</Note>
+<img 
+    src="/images/prism/slack/state_manager_notify_user.webp"
+    className="rounded-lg"
+    />
+
+The notification gets sent as part of the ```preRender```, ```prePlayblast```, ```preExport``` callback. So it gets executed before everything else. If you want to know what these notifcations look like, go here:
+[Slack - Notifications](/prism/slack/slack/notifications.mdx) 
+
+### Status
+If the Approvals options are enabled, Status will allow the artist to send their post with Approvals buttons. You can find more information on that here: [Slack - Approvals](/prism/slack/slack/approvals.mdx)
 
 ### Conversion
 
@@ -44,12 +62,3 @@ whether or not it will be converted.
 This process happens after the rendering is completed so it happens in the “postRender” callback.  
 
 
-### Notify Artist 
-This option will allow you to choose an artist to send a notification to, whether that be by channel, directly, or ephemerally.
-<img 
-    src="/images/prism/slack/state_manager_notify_user.webp"
-    className="rounded-lg"
-    />
-
-The notification gets sent as part of the ```preRender``` and ```prePlayblast``` callback. So it gets executed before everything else. If you want to know what these notifcations look like, go here:
-[Slack - Notifications](/prism/slack/integration/slack#notifications) 

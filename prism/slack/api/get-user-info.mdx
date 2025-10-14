@@ -1,0 +1,34 @@
+---
+title: "Get User Info"
+description: "Grabs the all the information for the slack user."
+---
+### Arguments
+<ParamField path="access_token" type="string" required>
+    The Bot OAuth Token acquired from the Slack app
+</ParamField>
+<ParamField path="user_id" type="string" required>
+    Slack User ID
+</ParamField>
+
+### Example
+```python Slack\Scripts\client\slack\api\get.py lines icon="python"
+slack = pcore.getPlugin('Slack')
+
+slack.get_access_token()
+project = get_current_project()
+channel_id = slack.get_channel_id(access_token, project)
+channel_users = slack.get_channel_users(access_token, channel_id)
+
+prism_user = slack.get_prism_slack_username()
+slack_user_id = slack.get_slack_user_id(prism_user, channel_users)
+
+user_info = slack.get_user_info(access_token, slack_user_id)
+
+print(user_info)
+```
+  
+### Response
+<ResponseField name="user_info" type="Dictionary">
+    Returns a dictionary of information about the selected user.
+</ResponseField>
+  

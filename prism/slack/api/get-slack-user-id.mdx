@@ -1,0 +1,33 @@
+---
+title: "Get Slack User ID"
+description: "Grabs the ID of the Slack user."
+---
+### Arguments
+<ParamField path="username" type="string" required>
+    The Bot OAuth Token acquired from the Slack app
+</ParamField>
+<ParamField path="channel_users" type="string" required>
+    Usergroup name
+</ParamField>
+
+### Example
+```python Slack\Scripts\client\slack\api\get.py lines icon="python"
+slack = pcore.getPlugin('Slack')
+
+access_token = slack.get_access_token()
+username = slack.get_prism_slack_username()
+project = slack.get_current_project()
+
+channel_id = slack.get_channel_id(access_token, project)
+channel_users = slack.get_channel_users(access_token, channel_id)
+
+id = slack.get_slack_user_id(username, channel_users)
+
+print(id)
+```
+  
+### Response
+<ResponseField name="id" type="string">
+    Returns the id of the requested user.
+</ResponseField>
+  

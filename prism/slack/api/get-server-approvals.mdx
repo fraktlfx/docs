@@ -1,0 +1,20 @@
+---
+title: "Get Server Approvals"
+description: "Grabs the value of whether or not Approvals will be used in Prism/Slack"
+---
+
+
+### Example
+```python Slack\Scripts\client\prism\api.py lines icon="python"
+slack = pcore.getPlugin('Slack')
+
+enabled = slack.get_server_approvals()
+
+print(enabled)
+```
+  
+### Response
+<ResponseField name="enabled" type="String">
+    Returns a True or False string value (not a boolean)
+</ResponseField>
+  

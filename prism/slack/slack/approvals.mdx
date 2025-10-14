@@ -1,37 +1,8 @@
 ---
-title: "Slack"
+title: "Approvals"
 ---
 
-## Publish
-  
-### Standard
-This is the simple interface that gets published with the file that gets uploaded. 
-The artist who uploads the file will get tagged directly. This will allow them to be notified if someone makes any comments or reactions to it.  
-
-<img
-    src="/images/prism/slack/slack_default_content_layout.webp"
-    className="rounded-lg"
-/>  
-  
-## Notifications
-  
-### Standard
-All notifications will popup to their respected channels and let everyone know that there is an incoming update for renders. 
-This will look relatively the same based on the option for Channel or Direct messages. 
-<img 
-    src="/images/prism/slack/slack_notification_standard.webp"
-    className="rounded-lg"
-/>
-  
-### Ephemeral
-Notifications sent Ephemerally will post to the channel or direct messages and look like this. This lets only the user who got notified see the post.
-<img 
-    src="/images/prism/slack/slack_notification_ephemeral.webp"
-    className="rounded-lg"
-/>
-
-## Approvals
-
+## Status
 ### Work in Progress
 The work in progress post when Approvals is enabled will show up like the standard publish. There will be virutally no changes, with the exception
 of the metadata applied to the post.
@@ -44,7 +15,7 @@ If the Approvals options are enabled, this is how your slack post will come acro
 />
   
   
-
+## Button Interactivity
 ### Approved
 When you press the ‘Approved’ button in the approvals section of the message block, it will post to the message block as a thread this message:
 <img 
@@ -55,8 +26,26 @@ When you press the ‘Approved’ button in the approvals section of the message
 The person who pressed the button will be the one tagged in the threaded post as the Approver.
 
 ### Needs Revised
+  
 When you press the ‘Needs Revised’ option, you will be prompted with a modal, that will allow you to leave comments that need to be addressed. This is what that window will look like:
 <img 
     src="/images/prism/slack/slack_approvals_needs_revised_modal.webp"
+    className="rounded-lg"
+/>
+  
+After you have submitted the notes, it will also create a threaded post to the message block letting you know who marked it as this status, and post the notes that need to be addressed in the bottom of the adjusted status.
+<img 
+    src="/images/prism/slack/slack_approvals_needs_revised_message.webp"
+    className="rounded-lg"
+/>
+
+### CBB
+The CBB button will do the same thing as the Needs Revised option.
+<img
+    src="/images/prism/slack/slack_approvals_cbb_modal.webp"
+    className="rounded-lg"
+/>
+<img
+    src="/images/prism/slack/slack_approvals_cbb_message.webp"
     className="rounded-lg"
 />
